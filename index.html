@@ -6,15 +6,18 @@
     <title>지월드</title>
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css"> <!--우리가 하는 스타일 시트는 이렇게 마지막에 넣어야함-->
     <script src="../libs/js/jquery.min.js"></script> <!--제이쿼리가 첫번째로 걸려야함-->
     <script src="../libs/js/popper.min.js"></script> <!--팝퍼가 두번째-->
     <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
-    <header class="border-md-bottom border-none pb-3">
+    <header class="pb-3">
         <nav class="top-nav d-md-block d-none border-bottom">
             <div class="container">
                 <div class="row justify-content-end">
@@ -174,14 +177,14 @@
                                 </ul>
                             </li>    
                             <li><a href="#">상의</a>
-                                <!--상의 서브메뉴-->
-                                <!-- <ul class="sub">
+                                <!-- 상의 서브메뉴-->
+                                <ul class="sub">
                                     <li><a href="#">긴팔티셔츠</a></li>
                                     <li><a href="#">맨투맨</a></li>
                                     <li><a href="#">후드</a></li>
                                     <li><a href="#">반팔/민소매티셔츠</a></li>
                                     <li><a href="#">니트</a></li>
-                                </ul> -->
+                                </ul>
                             </li>
                             <li><a href="#">셔츠/블라우스</a></li>
                             <li><a href="#">트레이닝</a></li>
@@ -190,31 +193,39 @@
                             <li><a href="#">스커트</a></li>
                             <li><a href="#">팬츠</a>
                                 <!--팬트 서브메뉴-->
-                                <!-- <li><a href="#">청바지</a></li>
-                                <li><a href="#">면바지</a></li>
-                                <li><a href="#">슬랙스</a></li>
-                                <li><a href="#">와이드팬츠</a></li>
-                                <li><a href="#">숏팬츠</a></li>
-                                <li><a href="#">조거팬츠</a></li>
-                                <li><a href="#">기장별</a></li> -->
+                                <ul class="sub">
+                                    <li><a href="#">청바지</a></li>
+                                    <li><a href="#">면바지</a></li>
+                                    <li><a href="#">슬랙스</a></li>
+                                    <li><a href="#">와이드팬츠</a></li>
+                                    <li><a href="#">숏팬츠</a></li>
+                                    <li><a href="#">조거팬츠</a></li>
+                                    <li><a href="#">기장별</a></li> 
+                                </ul>
                             </li>
                             <li><a href="#">가방</a>
                                 <!--가방 서브메뉴-->
-                                <!-- <li><a href="#">백팩/스쿨백</a></li>
-                                <li><a href="#">크로스/토트백</a></li> -->
+                                <ul class="sub">
+                                    <li><a href="#">백팩/스쿨백</a></li>
+                                    <li><a href="#">크로스/토트백</a></li>
+                                </ul>
                             </li>
                             <li><a href="#">신발</a>
                                 <!--신발 서브메뉴-->
-                                <!-- <li><a href="#">운동화/단화</a></li>
-                                <li><a href="#">구두/워커</a></li>
-                                <li><a href="#">샌들/슬리퍼/장화</a></li> -->
+                                <ul class="sub">
+                                    <li><a href="#">운동화/단화</a></li>
+                                    <li><a href="#">구두/워커</a></li>
+                                    <li><a href="#">샌들/슬리퍼/장화</a></li>
+                                </ul>
                             </li>
                             <li><a href="#">액세서리</a>
                                 <!--액세서리 서브메뉴-->
-                                <!-- <li><a href="#">주얼리</a></li>
-                                <li><a href="#">패션소품</a></li>
-                                <li><a href="#">양말/스타킹</a></li>
-                                <li><a href="#">헤어액세서리</a></li> -->
+                                <ul class="sub">
+                                    <li><a href="#">주얼리</a></li>
+                                    <li><a href="#">패션소품</a></li>
+                                    <li><a href="#">양말/스타킹</a></li>
+                                    <li><a href="#">헤어액세서리</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
@@ -232,11 +243,180 @@
                             <input type="text" name="m-search" class="m-search"> 
                             <i class="fa-solid fa-magnifying-glass"></i>               
                     </form>
+
+                    <!-- 내비게이션 -->
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">지월드한정상품</a>
+                        <div class="d-none d-md-block line"></div>
+                    </div>
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">베스트</a>
+                        <div class="d-none d-md-block line"></div>
+                    </div>
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">오늘출발</a>
+                        <div class="d-none d-md-block line"></div>
+                    </div>
+
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">아우터</a>
+                        <div class="d-none d-md-block line"></div>
+                        <ul class="nav">                 
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">가디건/조끼</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">야상/점퍼</a>
+                            </li>     
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">자켓/코트</a>
+                            </li>   
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">패딩</a>
+                            </li>   
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">플리스</a>
+                            </li>                         
+                        </ul>
+                    </div>
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">상의</a>
+                        <div class="d-none d-md-block line"></div>
+                        <ul class="nav">                 
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">긴팔티셔츠</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">맨투맨</a>
+                            </li>     
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">후드</a>
+                            </li>   
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">반팔/민소매티셔츠</a>
+                            </li>   
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">니트</a>
+                            </li>                         
+                        </ul>
+                    </div>
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">셔츠/블라우스</a> 
+                        <div class="d-none d-md-block line"></div>
+                    </div>
+
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">트레이닝</a>
+                        <div class="d-none d-md-block line"></div>
+                    </div>
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">베이직</a>
+                        <div class="d-none d-md-block line"></div>
+                    </div>
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">원피스</a>
+                        <div class="d-none d-md-block line"></div>
+                    </div>
+
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">스커트</a>
+                        <div class="d-none d-md-block line"></div>
+                    </div>
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">팬츠</a>
+                        <div class="d-none d-md-block line"></div>
+                        <ul class="nav">                 
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">청바지</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">면바지</a>
+                            </li>     
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">슬랙스</a>
+                            </li>   
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">와이드팬츠</a>
+                            </li>   
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">숏팬츠</a>
+                            </li>                
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">조거팬츠</a>
+                            </li>          
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">기장별</a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">가방</a>
+                        <div class="d-none d-md-block line"></div>
+                        <ul class="nav">                 
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">백팩/스쿨백</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">크로스/토트백</a>
+                            </li>                           
+                        </ul>
+                    </div>
+
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">신발</a>
+                        <div class="d-none d-md-block line"></div>
+                        <ul class="nav">                 
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">운동화/단화</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">구두/워커</a>
+                            </li>     
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">샌들/슬리퍼/장화</a>
+                            </li>                           
+                        </ul>
+                    </div>
+                    <div class="col-nav col-md-4 col-12">
+                        <a href="#">액세서리</a>
+                        <div class="d-none d-md-block line"></div>
+                        <ul class="nav">                 
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">주얼리</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">패션소품</a>
+                            </li>     
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">양말/스타킹</a>
+                            </li>   
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">헤어액세서리</a>
+                            </li>                          
+                        </ul>
+                    </div>
+
                 </div><!--row-->
-
-
             </div><!--container-->
         </div><!--nav-all-->
     </header>
+
+    <div class="hero">
+        <div class="slider">
+            <div class="box"><img src="images/pd/001.jpg" alt="001">
+                <div class="text-box">
+                    <div class="btn">WIDE SLACKS</div>
+                    <h1>[MADE IN KOREA]</h1>
+                    <p>4가지 컬러, 2가지 디자인, 3가지 기장으로 준비했지만 품절!</p>
+                </div>
+            </div>    
+            <div class="box"><img src="images/pd/002.jpg" alt="002"></div>
+            <div class="box"><img src="images/pd/003.jpg" alt="003"></div>
+            <div class="box"><img src="images/pd/004.jpg" alt="004"></div>
+            <div class="box"><img src="images/pd/005.jpg" alt="005"></div>
+            <div class="box"><img src="images/pd/006.jpg" alt="006"></div>
+        </div>
+
+    </div>
 </body>
 </html>
