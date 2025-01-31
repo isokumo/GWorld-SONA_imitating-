@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지월드</title>
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!--우리가 하는 스타일 시트는 이렇게 마지막에 넣어야함-->
+    <script src="../libs/js/jquery.min.js"></script> <!--제이쿼리가 첫번째로 걸려야함-->
+    <script src="../libs/js/popper.min.js"></script> <!--팝퍼가 두번째-->
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header class="border-md-bottom border-none pb-3">
+        <nav class="top-nav d-md-block d-none border-bottom">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">회원가입(<span class="font-weight-normal text-danger">+ 2만원</span>)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">고객센터</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link btn btn-outline-dark btn-sm btn-login ">로그인</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-12 col-md-2 text-center text-md-left">
+                    <a href="#" class="brand">
+                        <i class="fa-solid fa-ghost"></i>GWorld
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                    <form class="search mt-2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </form>
+                </div>
+                <div class="col-12 col-md-3 d-none d-md-block d-md-flex justify-content-between">
+                    <a href="#" class="icon">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>출첵</p>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>좋아요</p>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>장바구니</p>
+                        <div class="badge-round">0</div>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-solid fa-shirt"></i>
+                        <p>기획전</p>
+                    </a>
+                </div>
+                <div class="col-md-3 d-none d-md-block p-reletive">
+                    <div class="hittext">
+                        <div class="hittext-in">
+                            <div><span class="text-danger">1.</span> 크롭</div>
+                            <div><span class="text-danger">2.</span> 와이드</div>
+                            <div><span class="text-danger">3.</span> SET</div>
+                            <div><span class="text-danger">4.</span> 오프숄더</div>
+                            <div><span class="text-danger">5.</span> 원피스</div>
+                            <div><span class="text-danger">6.</span> 집업</div>
+                            <div><span class="text-danger">7.</span> 트레이닝</div>
+                            <div><span class="text-danger">8.</span> 자켓</div>
+                            <div><span class="text-danger">9.</span> Only Sona</div>
+                            <div><span class="text-danger">10.</span> 오늘출발</div>
+                        </div>
+                        <i class="fa-solid fa-sort-down hit-down"></i>
+                    </div>
+                    <div class="hitbox">
+                        <h1>인기 검색어</h1>
+                        <ul>
+                            <li class="d-flex justify-content-between">
+                                <span class="font-weight-bold">
+                                    <span class="text-danger">1.</span> 크롭
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span class="font-weight-bold">
+                                    <span class="text-danger">2.</span> 와이드
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span class="font-weight-bold">
+                                    <span class="text-danger">3.</span> SET
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>
+                                    <span class="text-danger">4.</span> 오프숄더
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>
+                                    <span class="text-danger">5.</span> 원피스
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>
+                                    <span class="text-danger">6.</span> 집업
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>
+                                    <span class="text-danger">7.</span> 트레이닝
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>
+                                    <span class="text-danger">8.</span> 자켓
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>
+                                    <span class="text-danger">9.</span> Only Sona
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>
+                                    <span class="text-danger">10.</span> 오늘출발
+                                </span>
+                                <spen class="text-danger">-</spen>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="container mt-md-5 mt-2">
+            <div class="row mx-2 mx-md-0 justify-content-between">
+                <div class="col-a">
+                    <div class="h-bar">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+                <div class="col-b">
+                    <nav class="main-nav">
+                        <ul class="main d-flex list-unstyled font-weight-bold">
+                            <li class="ml-3"><a href="#" class="pink">지월드한정상품</a></li>
+                            <li><a href="#" class="purple">베스트</a></li>
+                            <li><a href="#">아우터</a>
+                                <!--아우터 서브메뉴-->
+                                <ul class="sub">
+                                    <li><a href="#">가디건/조끼</a></li>
+                                    <li><a href="#">야상/점퍼</a></li>
+                                    <li><a href="#">자켓/코트</a></li>
+                                    <li><a href="#">패딩</a></li>
+                                    <li><a href="#">플리스</a></li>
+                                </ul>
+                            </li>    
+                            <li><a href="#">상의</a>
+                                <!--상의 서브메뉴-->
+                                <!-- <ul class="sub">
+                                    <li><a href="#">긴팔티셔츠</a></li>
+                                    <li><a href="#">맨투맨</a></li>
+                                    <li><a href="#">후드</a></li>
+                                    <li><a href="#">반팔/민소매티셔츠</a></li>
+                                    <li><a href="#">니트</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="#">셔츠/블라우스</a></li>
+                            <li><a href="#">트레이닝</a></li>
+                            <li><a href="#">베이직</a></li>
+                            <li><a href="#">원피스</a></li>
+                            <li><a href="#">스커트</a></li>
+                            <li><a href="#">팬츠</a>
+                                <!--팬트 서브메뉴-->
+                                <!-- <li><a href="#">청바지</a></li>
+                                <li><a href="#">면바지</a></li>
+                                <li><a href="#">슬랙스</a></li>
+                                <li><a href="#">와이드팬츠</a></li>
+                                <li><a href="#">숏팬츠</a></li>
+                                <li><a href="#">조거팬츠</a></li>
+                                <li><a href="#">기장별</a></li> -->
+                            </li>
+                            <li><a href="#">가방</a>
+                                <!--가방 서브메뉴-->
+                                <!-- <li><a href="#">백팩/스쿨백</a></li>
+                                <li><a href="#">크로스/토트백</a></li> -->
+                            </li>
+                            <li><a href="#">신발</a>
+                                <!--신발 서브메뉴-->
+                                <!-- <li><a href="#">운동화/단화</a></li>
+                                <li><a href="#">구두/워커</a></li>
+                                <li><a href="#">샌들/슬리퍼/장화</a></li> -->
+                            </li>
+                            <li><a href="#">액세서리</a>
+                                <!--액세서리 서브메뉴-->
+                                <!-- <li><a href="#">주얼리</a></li>
+                                <li><a href="#">패션소품</a></li>
+                                <li><a href="#">양말/스타킹</a></li>
+                                <li><a href="#">헤어액세서리</a></li> -->
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-c text-right">
+                    <a href="#" class="today-start">오늘출발</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="nav-all">
+            <div class="container">
+                <div class="row">
+                    <form class="col-12 d-search d-block d-md-none text-right">                       
+                            <input type="text" name="m-search" class="m-search"> 
+                            <i class="fa-solid fa-magnifying-glass"></i>               
+                    </form>
+                </div><!--row-->
+
+
+            </div><!--container-->
+        </div><!--nav-all-->
+    </header>
+</body>
+</html>

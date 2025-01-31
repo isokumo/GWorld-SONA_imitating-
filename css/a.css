@@ -1,0 +1,113 @@
+a{ 
+    color:#272727;
+}
+a:hover{
+    color:#000;
+}
+.top-nav{
+    font-size:12px;
+    font-weight:600;
+}
+a.nav-link{
+    line-height:1.6rem;
+}
+.btn-sm.btn-login {
+    padding: 0.1rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    margin:0.5rem 1rem;
+}
+/********* LOGO ***************/
+.brand{
+    font-size:2.4rem;
+    font-weight:800;
+    font-variant: small-caps;
+    letter-spacing: -4px;
+    white-space: nowrap;
+}
+.brand i{
+    margin-right:1rem;
+}
+.search{
+    border:2px solid #222;
+    border-radius:1.5rem;
+    position:relative;
+    height:2.5rem;
+    display:flex;
+    padding:0 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.search input{
+    width:90%;
+    border:none;
+    outline: none;
+}
+.search i{
+    font-size:1.5rem;
+}
+.icon{
+    font-size:2rem;
+    height:60px;
+    position:relative;
+    width:56px;
+    text-align:center;
+}
+.icon i{
+    position:relative;
+}
+.icon:hover i{
+    animation: updown 0.5s infinite;
+}
+.icon p{
+    font-size:14px;
+    font-weight:600;
+    position:absolute;
+    width:3.5rem;
+    text-align:center;
+    left:0%;
+}
+.badge-round{
+    position:absolute;
+    background-color: #ff7d9e;
+    color:#fff;
+    font-size:12px;
+    width: 1.3rem;
+    height:1.3rem;
+    border-radius:50%;
+    line-height:1.3rem;
+    text-align:center;
+    top:5px;
+    right:2px;
+    z-index:2;
+}
+.hittext{
+    border-bottom:1px solid var(--gray);
+    position:relative;
+    height:25px;
+    overflow:hidden;
+    margin-top:1rem;
+    padding:0 10px;
+    cursor: pointer;
+}
+.hit-down{
+    position:absolute;
+    top:0px;
+    right:15px;
+}
+.hittext-in{
+    top:0;
+    left:0;
+    position:absolute;
+}
+.hittext-in>div{
+    height:25px;
+}
+@keyframes updown {
+    0%{top:0;}
+    25%{top:5px;}
+    50%{top:0px;}
+    75%{top:-5px;}
+    100%{top:0;}
+}
