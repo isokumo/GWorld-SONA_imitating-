@@ -469,5 +469,21 @@ a.icon:hover i{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     }
+
+    /************ contents ************/
     
+    .contents{
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        
+    }
+    .contents>div{
+    }
+    .contents img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    
+    }
 }
