@@ -114,22 +114,22 @@ $(document).ready(function(){
             tags += `</div>`;
         });
 
-        //동적으로 생성한 html을 .slider애 추가
+        //동적으로 생성한 html을 .slider에 추가
         $('.slider').html(tags);
 
         //slick 초기화 (생성한 html을 slick에 담기)
         initSlick();
-    })
+    });
 
-    function initSlick(){
+
+   /********slick*********/
+
+   function initSlick(){
 
     let slider = $(".slider");
     let innerSlider = $(".box");
 
-
-
-
-    /********slick*********/
+ 
     slider.slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -172,4 +172,9 @@ function slideUp(){
         //top을 0으로 초기화
     });
 };//slideup
+
+
+ /************ content section ***********/
+
+ 
 

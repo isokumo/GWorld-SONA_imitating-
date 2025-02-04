@@ -460,30 +460,87 @@ a.icon:hover i{
         height: 40px;
     }
     .slick-dots li button:before{
-    content: '';
-    width:10px;
-    height:10px;
-    background-color:#000;
-    border-radius:50%;
-    opacity: .25;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+        content: '';
+        width:10px;
+        height:10px;
+        background-color:#000;
+        border-radius:50%;
+        opacity: .25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     /************ contents ************/
-    
+    .contents-all{
+        margin-top: 50px;
+    }
+    .contents-menu{
+        margin: 15px 0;
+    }
+    .contents-menu a{
+        display: inline-block;
+        background-color: #ededed;
+        border-radius: 50px;
+        width: 93px;
+        height: 43px;
+        text-align: center;
+        padding-top:8px ;
+        font-size: 18px;
+        margin-right:15px ;
+    }
+    .contents-menu a:hover{
+        text-decoration: none;
+        background-color: #ff7d9e;
+        color: #fff;
+        font-weight: 700;
+    }
     .contents{
         justify-content: space-between;
-        align-items: center;
-        display: flex;
-        
     }
     .contents>div{
+        margin-bottom: 50px;
+        position: relative;
     }
     .contents img{
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+    .heart-icon{
+        position: absolute;
+        font-size: 30px;
+        font-weight: 500;
+        color: #fff;
+        bottom: 95px;
+        right: 15px;
+    }
+    .heart-icon-full{
+        position: absolute;
+        font-size: 30px;
+        font-weight: 500;
+        color: #ff7d9e;
+        bottom: 95px;
+        right: 15px;
+    }
+    .contents p{
+        margin: 10px 0 3px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .con-title{
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 300;
+    }
+    .con-per{
+        color: #ff7d9e;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .con-prize{
+        font-weight: 600;
     }
 }
