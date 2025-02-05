@@ -131,13 +131,15 @@ $(document).ready(function(){
 
  
     slider.slick({
+        centerMode:true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '30px',
+        centerPadding: '80px',
         autoplay: true,
         autoplaySpeed: 6000,
         dots:true,
+        prevArrow : '<button type="button" class="prev"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="next"><i class="fa-solid fa-chevron-right"></i></button>',  
         responsive: [
             {
              breakpoint: 600, 
@@ -158,7 +160,7 @@ $(document).ready(function(){
     });
    }
 
-});
+
 
 function slideUp(){
     $(".hittext-in").animate({
@@ -176,5 +178,38 @@ function slideUp(){
 
  /************ content section ***********/
 
- 
+ $.getJSON("js/data2.json", (data)=>{
+    let tags = "";
+
+    //json 데이터를 이용하여 루프를 돌며 html을 생성
+    $.each(data, (index,item)=>{
+            tags += `<div>
+                        <img src="images/pd/${item.images}" alt="${item.images}">
+                        <span class="heart-icon"><i class="heart-i ri-heart-3-line"></i></span>
+                        <p><i class="ri-truck-line"></i>오늘출발</p>
+                        <div class="con-title">${item.title}</div>
+                        <span class="con-per">${item.per}</span>
+                        <span class="con-prize">${item.prize}</span>
+                     </div>`;
+    });
+
+    //동적으로 생성한 html을 .contents에 추가
+    $('.contents').html(tags);
+});
+
+$(".heart-icon").click(function(){
+    if($('.heart-i').hasClass('ri-heart-3-line')){
+        $('.heart-i').removeClass('ri-heart-3-line');
+        $('.heart-i').addClass('ri-heart-3-fill');
+        // $('.heart-icon').css("color","#ff7d9e");
+    }else{
+        $('.heart-i').removeClass('ri-heart-3-fill');
+        $('.heart-i').addClass('ri-heart-3-line');
+        // $('.heart-icon').css("color","#fff");
+    };
+});
+
+
+
+});
 
