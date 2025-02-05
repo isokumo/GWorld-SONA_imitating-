@@ -131,21 +131,24 @@ $(document).ready(function(){
 
     /********slick*********/
     slider.slick({
+        centerMode: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '30px',
+        centerPadding: '80px',
         autoplay: true,
         autoplaySpeed: 6000,
         dots:true,
+        prevArrow: '<button type="button" class="prev"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="next"><i class="fa-solid fa-chevron-right"></i></button>',
         responsive: [
-            {
-             breakpoint: 600, 
-             slidesToShow: 1,
-             slideToScroll: 1
-            }
+          {
+            breakpoint: 600,
+            slidesToShow: 1,
+            slideToScroll:1
+          }  
         ]
     });
+
 
     innerSlider.slick({
         speed:600,
@@ -157,6 +160,27 @@ $(document).ready(function(){
        arrows : false
     });
    }
+
+   //list click
+   $('.list-btn').on('click',function(e){
+        e.preventDefault();
+        const dataList = $(this).data("list");
+        $('.list-btn').removeClass('act');
+        $(this).addClass('act')
+
+        $("#row").children().removeClass(function(index, className){
+            return (className.match(/col-md-\d+/g) || []).join('');
+        }).addClass(dataList);
+
+        /* className.match(/col-md-\d+/g)  className 에서 col-md-숫자 형식의 모든 클래스를 찾아 배열로 반환
+        ||[]  만약 col-md-숫자에 매칭되는 게 없을 경우 null을 반환 하기 때문에 null.join(' ')은 에러 발생
+        따러서 []를 이용하여 null일 경우 빈 배열로 반환되도록 함. 
+        match()의 결과는 ['col-md-3', 'col-md-5'...] 형식의 배열로 반환되기 때문에 join(' ')로 공백을 기준으로
+        하나의 문자열이 되게 함. 즉 class="col-md-3 col-md-12" 쌍따옴표 안처럼 하나의 문자열로 쓰여지게 함
+        사실은 col-md-는 하나의 클래스만 받지만 이 역시 하나의 배열로 들어옴.
+        */
+    
+   });
 
 });
 
