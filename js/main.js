@@ -162,54 +162,58 @@ $(document).ready(function(){
 
 
 
-function slideUp(){
-    $(".hittext-in").animate({
-        top: '-25px'
-    },300,function(){
-        $('.hittext-in div:eq(0)').clone().appendTo('.hittext-in');
-        //첫번째 박스 복제해서 부모 제일 뒤에 붙인다.
-        $('.hittext-in div:eq(0)').remove();
-        //첫번째 박스 삭제
-        $('.hittext-in').css('top', 0);
-        //top을 0으로 초기화
-    });
-};//slideup
+    function slideUp(){
+        $(".hittext-in").animate({
+            top: '-25px'
+        },300,function(){
+            $('.hittext-in div:eq(0)').clone().appendTo('.hittext-in');
+            //첫번째 박스 복제해서 부모 제일 뒤에 붙인다.
+            $('.hittext-in div:eq(0)').remove();
+            //첫번째 박스 삭제
+            $('.hittext-in').css('top', 0);
+            //top을 0으로 초기화
+        });
+    };//slideup
 
 
  /************ content section ***********/
 
- $.getJSON("js/data2.json", (data)=>{
-    let tags = "";
+    $.getJSON("js/data2.json", (data)=>{
+        let tags = "";
 
-    //json 데이터를 이용하여 루프를 돌며 html을 생성
-    $.each(data, (index,item)=>{
-            tags += `<div>
-                        <img src="images/pd/${item.images}" alt="${item.images}">
-                        <span class="heart-icon"><i class="heart-i ri-heart-3-line"></i></span>
-                        <p><i class="ri-truck-line"></i>오늘출발</p>
-                        <div class="con-title">${item.title}</div>
-                        <span class="con-per">${item.per}</span>
-                        <span class="con-prize">${item.prize}</span>
-                     </div>`;
+        //json 데이터를 이용하여 루프를 돌며 html을 생성
+        $.each(data, (index,item)=>{
+                tags += `<div>
+                            <img src="images/pd/${item.images}" alt="${item.images}">
+                            <span class="heart-icon"><i class="heart-i ri-heart-3-line"></i></span>
+                            <p><i class="ri-truck-line"></i>오늘출발</p>
+                            <div class="con-title">${item.title}</div>
+                            <span class="con-per">${item.per}</span>
+                            <span class="con-prize">${item.prize}</span>
+                        </div>`;
+        });
+
+        //동적으로 생성한 html을 .contents에 추가
+        $('.contents').html(tags);
+    
+
+        $('.heart-icon i').on('click',function(){
+            if($(this).hasClass('ri-heart-3-line')){
+                $(this).removeClass('ri-heart-3-line');
+                $(this).addClass('ri-heart-3-fill');
+                
+            }else{
+                $(this).removeClass('ri-heart-3-fill');
+                $(this).addClass('ri-heart-3-line');
+            };
+        });
+
+        $('.heart-icon').on('click',function(){
+            $(this).toggleClass('heart-ani')
+        })
+
+    
     });
-
-    //동적으로 생성한 html을 .contents에 추가
-    $('.contents').html(tags);
-});
-
-$(".heart-icon").click(function(){
-    if($('.heart-i').hasClass('ri-heart-3-line')){
-        $('.heart-i').removeClass('ri-heart-3-line');
-        $('.heart-i').addClass('ri-heart-3-fill');
-        // $('.heart-icon').css("color","#ff7d9e");
-    }else{
-        $('.heart-i').removeClass('ri-heart-3-fill');
-        $('.heart-i').addClass('ri-heart-3-line');
-        // $('.heart-icon').css("color","#fff");
-    };
-});
-
-
 
 });
 

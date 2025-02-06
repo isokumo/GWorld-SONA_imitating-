@@ -524,9 +524,27 @@ a.icon:hover i{
         position: absolute;
         font-size: 30px;
         font-weight: 500;
-        color: #fff;
         bottom: 95px;
         right: 15px;
+    }
+    .heart-ani{
+        animation: heart 400ms
+    }
+    @keyframes heart {
+        0%{font-size: 30px;}
+        25%{font-size: 35px;
+            right: 11px;}
+        50%{font-size: 30px;}
+        75%{font-size: 25px;
+            right: 17px;}
+        100%{font-size: 30px;}
+    }
+    .ri-heart-3-line{
+        color: #fff;
+    }
+    .ri-heart-3-fill{
+        color:#ff7d9e;
+        
     }
     .contents p{
         margin: 10px 0 3px;
