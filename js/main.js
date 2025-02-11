@@ -1,6 +1,6 @@
 $(document).ready(function(){
     setInterval(slideUp, 2000);
-
+ 
     $(".hittext").click(function(){
         let hitborder = $(".hittext").css('border-bottom-style');
         if(hitborder == 'solid'){
@@ -93,40 +93,37 @@ $(document).ready(function(){
 
     // $('.slider').html(tags);
 
+    
+        $.getJSON("js/data.json", (data)=>{
+            let tags = "";
 
-
-    $.getJSON("js/data.json", (data)=>{
-        let tags = "";
-
-        //json 데이터를 이용하여 루프를 돌며 html을 생성
-        $.each(data, (index,item)=>{
-            tags += `<div class = "box">`;
-            $.each(item.images,(i, img)=>{
-                tags += `<div class = "fadebox">
-                            <img src = "images/pd/${img}" alt="${img}">
-                            <div class = "text-box">
-                                <div class = "btn">${item.category}</div>
-                                <h1>${item.origin}</h1>
-                                <p>${item.desc}</p>
-                            </div>
-                        </div>`;
+            //json 데이터를 이용하여 루프를 돌며 html을 생성
+            $.each(data, (index,item)=>{
+                tags += `<div class = "box">`;
+                $.each(item.images,(i, img)=>{
+                    tags += `<div class = "fadebox">
+                                <img src = "images/pd/${img}" alt="${img}">
+                                <div class = "text-box">
+                                    <div class = "btn">${item.category}</div>
+                                    <h1>${item.origin}</h1>
+                                    <p>${item.desc}</p>
+                                </div>
+                            </div>`;
+                });
+                tags += `</div>`;
             });
-            tags += `</div>`;
+
+            //동적으로 생성한 html을 .slider애 추가
+            $('.slider').html(tags);
+
+            //slick 초기화 (생성한 html을 slick에 담기)
+            initSlick();
         });
-
-        //동적으로 생성한 html을 .slider애 추가
-        $('.slider').html(tags);
-
-        //slick 초기화 (생성한 html을 slick에 담기)
-        initSlick();
-    })
 
     function initSlick(){
 
     let slider = $(".slider");
     let innerSlider = $(".box");
-
-
 
 
     /********slick*********/

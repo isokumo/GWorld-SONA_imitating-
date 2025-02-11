@@ -15,6 +15,7 @@
     <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/list.js"></script>
 </head>
 <body>
     <header class="pb-3">
@@ -414,48 +415,20 @@
                 <a href="#" class="list-btn mx-3" data-list="col-md-4"></a>
                 <a href="#" class="list-btn mx-3" data-list="col-md-12"></a>
             </div>
-            <div class="row pt-4" id="row">
-                <div class="col-md-3 col-12">
-                    <div class="imgbox">
-                        <div class="imginner">
-                            <img src="images/pd/001.jpg" alt="001">  
-                        </div>
-                    </div>   
-                    <div class="textbox">
-                        <div class="btnbox">
-                        <span class="best">BEST</span>
-                        <span class="today">오늘출발</span>
-                        <span class="new">신상</span>
-                        </div>
-                        <h3 class="pd-title my-2">[봄신상]백 라벨 절개맨투맨</h3>
-                        <p class="pd-desc my-2">와우, 배기팬츠의 끝판왕! 허리는 편안, 스타일은 끝장나! #배기핏의 정석 #퀄리티 대박</p>
-                        <p class="pd-price my-2"><del>55,000원</del> 45,000원</p>
-                        <p class="pd-review">리뷰 : 65</p>
-                    </div>               
-                </div>
-                <div class="col-md-3 col-1">
-                    <img src="images/pd/002.jpg" alt="002">
-                </div>
-                <div class="col-md-3 col-1">
-                    <img src="images/pd/003.jpg" alt="003">
-                </div>
-                <div class="col-md-3 col-1">
-                    <img src="images/pd/004.jpg" alt="004">
-                </div>
-                <div class="col-md-3 col-1">
-                    <img src="images/pd/005.jpg" alt="005">
-                </div>
-                <div class="col-md-3 col-1">
-                    <img src="images/pd/006.jpg" alt="006">
-                </div>
-                <div class="col-md-3 col-1">
-                    <img src="images/pd/007.jpg" alt="007">
-                </div>
-                <div class="col-md-3 col-1">
-                    <img src="images/pd/008.jpg" alt="008">
-                </div>
+            <!-- category 메뉴 top, outer, dress, bottom, set -->
+
+            <div class="category-nav">
+                <a href="#" class="btn category-btn" data-category="ALL">ALL</a>   
+                <a href="#" class="btn category-btn" data-category="TOP">TOP</a>
+                <a href="#" class="btn category-btn" data-category="OUTER">OUTER</a>
+                <a href="#" class="btn category-btn" data-category="BOTTOM">BOTTOM</a>
+                <a href="#" class="btn category-btn" data-category="DRESS">DRESS</a>
+                <a href="#" class="btn category-btn" data-category="SET">SET</a>
             </div>
-            
+
+            <div class="row pt-4" id="row">
+            <!-- json으로 받아옴 -->  
+            </div>
         </div>
     </section>
 </body>
