@@ -179,7 +179,22 @@ $(document).ready(function(){
     
    });
 
-});
+    //퀵 메뉴 만들기
+   $(window).scroll(function(){
+    // console.log($(this).scrollTop()); 스크롤 했을 때의 위치값을 콘솔에서 보여줌
+    if($(this).scrollTop() > 900) {
+        const w = $('.container').width(); //container의 width 값, 1110
+        const left = $('#main>.container').offset().left; //왼쪽 0 부터 381.5 떨어짐
+        const right = w + left + 40;  // 1531.5
+        //console.log(right);
+        $(".quick").css('left', right + "px");
+        $(".quick").addClass('act');
+    }else{
+        $(".quick").removeClass('act');
+    }
+   });
+
+}); //query
 
 function slideUp(){
     $(".hittext-in").animate({

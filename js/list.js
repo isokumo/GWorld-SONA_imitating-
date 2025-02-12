@@ -43,16 +43,17 @@ $(function(){
             tags += `
             <div class="col-md-3 col-12">
                 <div class="imgbox">
-                <div class="imginner">
-                    <img src="images/pd/${item.img}" alt="${item.img}">
-                </div>
+                    <a href="main.html" class="imginner">
+                        <img src="images/pd/${item.img}" alt="${item.img}">
+                    </a>
                 </div>
                 <div class="textbox">
                     <div class="btnbox my-2">
                     ${ev}
                     </div> 
-                    <h3 class="pd-title my-2">${item.title} </h3>
-                    <p class="pd-desc my-2">${item.desc}</p>
+                    
+                    <h3 class="pd-title my-2"><a href="main.html">${item.title}</a></h3>
+                    <p class="pd-desc my-2"><a href="main.html">${item.desc}</a></p>
                     <p class="pd-price my-2"><del>${item.delPrice}</del> ${item.price}</p>
                     <p class="pd-review">리뷰 : ${item.review}</p>
                 </div> 
